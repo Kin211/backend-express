@@ -17,4 +17,10 @@ router.get('/', function(req, res, next) {
   res.send(obj);
 });
 
+
+router.post('/', function(req, res, next) {
+  newUser = {id: req.params.id, name: req.body.name};
+  res.status(201).json(newUser);
+})
+
 module.exports = router;
