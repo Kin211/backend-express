@@ -18,7 +18,7 @@ app.use((req, res, next) => {
     if (req.query.auth === 'true') {
         next();
     } else {
-        res.status(401);
+        res.sendStatus(401);
     }
 });
 
